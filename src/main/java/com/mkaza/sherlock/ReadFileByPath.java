@@ -1,11 +1,12 @@
 package com.mkaza.sherlock;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
 public class ReadFileByPath {
 
-    public static void readByPath(Path path) throws IOException {
-        FileReader.read(path);
+    public static File readByPath(Path path) throws IOException {
+        return null;
     }
 }

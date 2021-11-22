@@ -20,6 +20,7 @@ public class DatabaseConnectionUtil {
 
         } catch (SQLException e) {
             logger.error("Connection couldn't be opened!", e);
+//            logger.error(e.getMessage());
         } finally {
             try {
                 if (conn != null) {

@@ -4,44 +4,24 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class TestLogCollecting {
 
     @Test
-    public void nullAssertionTest() {
-        Assert.assertNotNull(null);
-    }
-
-
-    @Test
-    @Ignore
-    public void BooleanAssertionTest() {
-        Assert.assertTrue(false);
+    public void arrayEqualsAssertionTest() {
+        String[] s1 = {"s1.1", "s1.2"};
+        String[] s2 = {"s2.1", "s2.2"};
+        Assert.assertArrayEquals(s1, s2);
     }
 
     @Test
-    @Ignore
     public void PositiveAssertionTest() {
         Assert.assertTrue(true);
     }
 
-    @Test
-    @Ignore
-    public void ProcessNullTest() {
-        NotNullProcessor.processNotNull(null);
-    }
-
-    @Test
-    @Ignore
-    public void ReadFileFromStringPathTest() throws IOException {
-        ReadFileByStringPath.readByStringPath("\\");
-    }
-
-    @Test
-    @Ignore
-    public void ReadFileFromPathTest() throws IOException {
-        ReadFileByPath.readByPath(Paths.get("\\"));
-    }
 }
